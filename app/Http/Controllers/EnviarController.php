@@ -35,7 +35,7 @@ class EnviarController extends Controller
 
         //Enviar correo
 
-        Notification::route('mail', 'john@doe.com')->notify(new Compartir($model));
+        Notification::route('mail', $model->to)->notify(new Compartir($model));
 
 
         return response()->json(['message' => 'Success','uuid' => $model->uuid], 200);
