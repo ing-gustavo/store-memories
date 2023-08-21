@@ -35,8 +35,15 @@ class UploadController extends Controller
             return response()->json(['error','The file could not be saved'],500);
         }
 
-        //If uploaded succesful, save file information
+
         $uploadedFile       =   $request->file("image");
+        info($uploadedFile->hashName());
+        info($uploadedFile->getClientOriginalName());
+        info($uploadedFile->getClientMimeType());
+
+
+        //If uploaded succesful, save file information
+
         $media->name        =   $uploadedFile->hashName();
         $media->file_name   =   $uploadedFile->getClientOriginalName();
         $media->mime_type   =   $uploadedFile->getClientMimeType();
