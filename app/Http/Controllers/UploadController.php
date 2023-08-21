@@ -37,9 +37,9 @@ class UploadController extends Controller
 
 
         $uploadedFile       =   $request->file("image");
-        info($uploadedFile->hashName());
-        info($uploadedFile->getClientOriginalName());
-        info($uploadedFile->getClientMimeType());
+        info('hashName '.$uploadedFile->hashName());
+        info('getClientOriginalName '.$uploadedFile->getClientOriginalName());
+        info('getClientMimeType '.$uploadedFile->getClientMimeType());
 
 
         //If uploaded succesful, save file information
