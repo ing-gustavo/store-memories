@@ -1,6 +1,6 @@
 <template>
 
-    <div class="container  mx-auto  py-8">
+    <div class="container  mx-auto pt-2 pb-64" >
 
         <nav aria-label="Progress" class="bg-white">
 
@@ -57,7 +57,7 @@
         </nav>
 
 
-        <div class="flex items-center justify-center py-4">
+        <div class="flex items-center justify-center">
 
             <div class="w-full rounded-lg  shadow bg-white">
 

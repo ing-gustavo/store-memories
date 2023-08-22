@@ -69,7 +69,7 @@
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
               <div class="mx-auto max-w-xl text-center">
-                <h2 class="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Testimonials</h2>
+                <h2 class="text-lg font-semibold leading-8 tracking-tight text-indigo-600">Testimonios</h2>
                 <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Hemos trabajado con miles de personas increíbles.</p>
               </div>
 
@@ -84,10 +84,10 @@
                                 <p>“Esta plataforma cambió la forma en que interactúo con mis clientes. Ahorro tiempo y ellos obtienen impresiones de primera calidad. ¡Imprescindible para fotógrafos profesionales!”</p>
                             </blockquote>
                             <figcaption class="mt-6 flex items-center gap-x-4">
-                                <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <img class="h-10 w-10 rounded-full bg-gray-50 hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                                 <div>
                                 <div class="font-semibold text-gray-900">Laura R.</div>
-                                <div class="text-gray-600">@lesliealexander</div>
+                                <div class="text-gray-600 hidden">@lesliealexander</div>
                                 </div>
                             </figcaption>
                         </figure>
@@ -101,10 +101,10 @@
                                 <p>“La herramienta perfecta para entregar imágenes a mis clientes. La calidad de impresión es asombrosa y la plataforma es muy fácil de usar. Mis clientes están encantados.”</p>
                             </blockquote>
                             <figcaption class="mt-6 flex items-center gap-x-4">
-                                <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <img class="h-10 w-10 rounded-full bg-gray-50 hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                                 <div>
                                 <div class="font-semibold text-gray-900">Carlos M.</div>
-                                <div class="text-gray-600">@lesliealexander</div>
+                                <div class="text-gray-600 hidden">@lesliealexander</div>
                                 </div>
                             </figcaption>
                         </figure>
@@ -118,16 +118,75 @@
                                 <p>“Desde que uso Envíamelo.com, mi trabajo como fotógrafa se ha vuelto mucho más eficiente. El almacenamiento ilimitado y la duración de 30 días de los enlaces de descarga son una verdadera ventaja. Mis clientes pueden acceder a sus imágenes cuando lo deseen, y la calidad de impresión es inigualable.”</p>
                             </blockquote>
                             <figcaption class="mt-6 flex items-center gap-x-4">
-                                <img class="h-10 w-10 rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <img class="h-10 w-10 rounded-full bg-gray-50 hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                                 <div>
-                                <div class="font-semibold text-gray-900">María G</div>
-                                <div class="text-gray-600">@lesliealexander</div>
+                                <div class="font-semibold text-gray-900 ">Ana - Amante de la Fotografía</div>
+                                <div class="text-gray-600 hidden">@lesliealexander</div>
                                 </div>
                             </figcaption>
                         </figure>
 
 
                     </div>
+
+                    <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                            <blockquote class="text-gray-900">
+                                <p>"Enviamelos.com ha sido una verdadera solución para mi negocio fotográfico. Ahora puedo compartir mis imágenes en alta resolución con mis clientes de manera rápida y sencilla. Es genial que puedan descargar las fotos sin perder calidad. ¡Mis clientes están encantados y yo también!"</p>
+                            </blockquote>
+                            <figcaption class="mt-6 flex items-center gap-x-4">
+                                <img class="h-10 w-10 rounded-full bg-gray-50 hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <div>
+                                <div class="font-semibold text-gray-900">María - Fotógrafa Profesional:</div>
+                                <div class="text-gray-600 hidden">@lesliealexander</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+
+                    </div>
+
+                    <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                            <blockquote class="text-gray-900">
+                                <p>"Descubrí Enviamelos.com mientras buscaba una forma de compartir mis proyectos de diseño con mis profesores. La calidad de las imágenes es impresionante, y el hecho de que pueda enviar enlaces para descargar evita cualquier complicación. Definitivamente, esta plataforma ha facilitado mucho mi vida académica."</p>
+                            </blockquote>
+                            <figcaption class="mt-6 flex items-center gap-x-4">
+                                <img class="h-10 w-10 rounded-full bg-gray-50 hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <div>
+                                <div class="font-semibold text-gray-900">Luis - Estudiante de Diseño Gráfico</div>
+                                <div class="text-gray-600 hidden">@lesliealexander</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+
+                    </div>
+
+
+                    <div class="pt-8 sm:inline-block sm:w-full sm:px-4">
+
+                        <figure class="rounded-2xl bg-gray-50 p-8 text-sm leading-6">
+                            <blockquote class="text-gray-900">
+                                <p>"Como responsable de marketing, a menudo necesito compartir imágenes de alta calidad con el equipo creativo y los clientes. Enviamelos.com ha optimizado este proceso, permitiéndome enviar enlaces personalizados para la descarga. Ahorro tiempo y garantizo que todos vean los detalles tal como deben ser."</p>
+                            </blockquote>
+                            <figcaption class="mt-6 flex items-center gap-x-4">
+                                <img class="h-10 w-10 rounded-full bg-gray-50 hidden" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <div>
+                                <div class="font-semibold text-gray-900">  Carlos - Profesional de Marketing</div>
+                                <div class="text-gray-600 hidden">@lesliealexander</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+
+                    </div>
+
+
+
+
 
                   <!-- More testimonials... -->
                 </div>
