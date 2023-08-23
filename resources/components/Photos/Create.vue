@@ -77,8 +77,8 @@
                         credits="false"
                         :allowMultiple="true"
                         max-file-size="50MB"
-                        @addfilestart="disableButton = true"
-                        @onaddfile="disableButton = false"
+                        @addfilestart="isLoadingCheck"
+
 
 
                     />
@@ -121,6 +121,17 @@ export default{
         }
     },
     methods:{
+
+        isLoadingCheck(){
+            var isLoading = this.$refs.pond.getFiles().filter(x=>x.status !== 5).length !== 0;
+            if(isLoading) {
+                this.disableButton = true;
+                //$('#createCaseForm [type="submit"]').attr("disabled", "disabled");
+            } else {
+                this.disableButton = false;
+                //$('#createCaseForm [type="submit"]').removeAttr("disabled");
+            }
+        },
         save()
         {
 
@@ -173,8 +184,6 @@ export default{
         },
         handleProcessFile(error , file)
         {
-
-
             if(error)
             {
                 console.error(error);
@@ -183,7 +192,7 @@ export default{
 
             let objecto = JSON.parse(file.serverId);
             this.images.unshift(objecto)
-            this.disableButton = false
+            this.isLoadingCheck();
 
         }
     }
