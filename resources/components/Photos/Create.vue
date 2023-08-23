@@ -22,7 +22,6 @@
                     </div>
                 </li>
 
-
                 <li class="relative md:flex md:flex-1">
                     <!-- Upcoming Step -->
                     <a href="#" class="group flex items-center">
@@ -53,7 +52,9 @@
                         </span>
                     </a>
                 </li>
+                
             </ol>
+
         </nav>
 
 
@@ -78,9 +79,6 @@
                         :allowMultiple="true"
                         max-file-size="50MB"
                         @addfilestart="isLoadingCheck"
-
-
-
                     />
                     <div class="w-full  pb-10 mx-auto mb-10 gap-1  columns-3xs space-y-1">
                         <img  v-for="(image, index) in images" :key="index" :src="image.image_src" class="w-1/4">
@@ -126,36 +124,27 @@ export default{
             var isLoading = this.$refs.pond.getFiles().filter(x=>x.status !== 5).length !== 0;
             if(isLoading) {
                 this.disableButton = true;
-                //$('#createCaseForm [type="submit"]').attr("disabled", "disabled");
+
             } else {
                 this.disableButton = false;
-                //$('#createCaseForm [type="submit"]').removeAttr("disabled");
             }
         },
         save()
         {
-
-            console.log(JSON.stringify(this.images,null,4))
-
-            this.validationErrors = null; // Reset errors before making the request
+            this.validationErrors = null;
 
             Axios.post('/photos', {images:this.images})
-                .then(response => {
-                    // Handle the successful response
-                    console.log(response.data.message);
-                    location.href = '/photos/'+response.data.id+'/edit';
-                })
-                .catch(error => {
+            .then(response => {
+                location.href = '/photos/'+response.data.id+'/edit';
+            })
+            .catch(error => {
 
-                    if (error.response && error.response.status === 422) {
-                        // If there are validation errors, set the errors property
-                        this.validationErrors = error.response.data.errors;
-                    } else {
-                        // Handle other errors
-                        console.error(error);
-
-                    }
-                });
+                if (error.response && error.response.status === 422) {
+                    this.validationErrors = error.response.data.errors;
+                } else {
+                    console.error(error);
+                }
+            });
         },
         filepondInitialized()
         {
