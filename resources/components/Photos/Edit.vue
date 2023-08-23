@@ -43,9 +43,6 @@
                     </div>
                 </li>
 
-
-
-
                 <li class="relative md:flex md:flex-1">
                     <!-- Upcoming Step -->
                     <a href="#" class="group flex items-center">
@@ -90,14 +87,14 @@
                     <div>
                         <label for="from" class="block text-sm font-medium leading-6 text-gray-900">Enviar correo </label>
                         <div class="mt-2">
-                            <input type="email" v-model="from" name="from" id="from" autocomplete="email" :class="{ 'border-2 border-red-500': validationErrors && validationErrors.from}"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                            <input type="email" v-model="to" name="to" id="to"  :class="{ 'border-2 border-red-500': validationErrors && validationErrors.to}"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
 
                     <div class="">
                         <label for="to" class="block text-sm font-medium leading-6 text-gray-900">Tu correo</label>
                         <div class="mt-2">
-                            <input type="email" v-model="to" name="to" id="t" autocomplete="email2" :class="{ 'border-2 border-red-500': validationErrors && validationErrors.to}"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
+                            <input type="email" v-model="from" name="from" id="from" autocomplete="email" :class="{ 'border-2 border-red-500': validationErrors && validationErrors.from}"  class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                         </div>
                     </div>
 
