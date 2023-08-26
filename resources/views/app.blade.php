@@ -9,7 +9,7 @@
             <div class="grid gap-4 grid-cols-1 sm:grid-cols-2">
 
                 <div class="p-6 flex flex-col space-y-4 items-center justify-center ">
-                    <h1 class="text-2xl text-center sm:text-justify sm:text-6xl  text-gray-700 leading-snug">Envía y Comparte Imágenes de Alta Resolución Sin Limitaciones </h1>
+                    <h1 class="text-2xl text-center sm:text-left sm:text-6xl  text-gray-700 leading-snug">Envía y Comparte Imágenes de Alta Resolución Sin Limitaciones </h1>
                     <p class="mt-6 text-base sm:text-xl  text-gray-800 text-justify">Almacena tus imágenes en nuestra plataforma premium y ofrece descargas de alta calidad a tus clientes. Sube, comparte y permite impresiones sin complicaciones. Potencia tu negocio con nuestra solución diseñada para profesionales de la fotografía."</p>
                     <a href="/photos/create" class="inline-flex  bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Empezar ahora</a>
                 </div>
