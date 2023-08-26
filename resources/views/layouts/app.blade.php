@@ -18,26 +18,22 @@
         {!! SEO::generate(true) !!}
     </head>
 
-
-
     <body class="font-sans antialiased">
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
 
-            @include('layouts.navigation')
+            <header class="bg-white border-b shadow-md sticky top-0 z-50" x-data="{open:false}">
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white dark:bg-gray-800 shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                        Heather
-                    </div>
-                </header>
-            @endif
+                <nav class="mx-auto flex w-full items-center justify-between " aria-label="Global">
+                    <a href="/" class="text-3xl font-bold px-6 text-blue-600">Enviamelos</a>
+                    <a href="/photos/create" class="inline-flex  bg-blue-600 px-4 sm:px-10 py-6 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Empezar ahora</a>
+                </nav>
+
+            </header>
+
 
             <!-- Page Content -->
-            <main >
+            <main class="relative">
                 {{ $slot }}
             </main>
 
