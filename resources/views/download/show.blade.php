@@ -1,8 +1,5 @@
 <x-layout>
-
     <div id="app">
-        <download-show uuid="{{ $uuid }}"></download-show>
+        <downloads-show uuid="{{ $uuid }}"></downloads-show>
     </div>
-
-
 </x-layout>

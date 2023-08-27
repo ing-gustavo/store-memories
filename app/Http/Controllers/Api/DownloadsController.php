@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers\Api;
 
+use Carbon\Carbon;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Resources\DownloadResource;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\NotificarQueFueDescargado;
 
 class DownloadsController extends Controller
 {
@@ -38,14 +41,12 @@ class DownloadsController extends Controller
     public function getFolder(String $id)
     {
         $download = Photo::findOrFail($id);
-    
+
         $zip_file = 'enviamelo-'.$download->uuid.'.zip';
         $zip = new \ZipArchive();
         $zip->open($zip_file, \ZipArchive::CREATE | \ZipArchive::OVERWRITE);
 
-        $model = Photo::where('uuid',$download->uuid)->firstOrFail();
-
-        $archivos = $model->media;
+        $archivos = $download->media;
 
         foreach($archivos as $media)
         {
@@ -62,6 +63,25 @@ class DownloadsController extends Controller
         return response()->download($zip_file);
 
     }
+
+    public function markAsDownloaded(String $id)
+    {
+        $download = Photo::findOrFail($id);
+       
+        if($download->was_downloaded)
+        {
+            return new DownloadResource($download);
+        }
+
+        $download->was_downloaded = true;
+        $download->downloaded_at = Carbon::now();
+        $download->save();
+
+        Notification::route('mail', $download->from)->notify(new NotificarQueFueDescargado($download));
+
+        return new DownloadResource($download);
+    }
+
 
     /**
      * Update the specified resource in storage.

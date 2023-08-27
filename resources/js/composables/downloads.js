@@ -10,8 +10,15 @@ export default function useDownloads()
         download.value = response.data.data;
     }
 
+
+    const markDownloadAsDownloaded = async(id) => {
+        let response =  await axios.post('/api/downloads-mark-as-downloaded/'+id)
+        //download.value = response.data.data;
+    }
+
     return {
         download,
-        getDownload
+        getDownload,
+        markDownloadAsDownloaded
     }
 }

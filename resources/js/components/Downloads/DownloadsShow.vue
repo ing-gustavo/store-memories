@@ -25,7 +25,7 @@
             </div>
 
         </div>
-        
+
         <div class="col-span-8 px-2 pt-4">
 
             <ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
@@ -53,9 +53,8 @@
     import {onMounted,ref} from 'vue';
     import useDownloads from "../../composables/downloads";
     import axios from 'axios';
-    const validationErrors = ref([]);
     const loadingIcon = ref(false);
-    const { download, getDownload  } = useDownloads()
+    const { download, getDownload,markDownloadAsDownloaded } = useDownloads()
 
     const props = defineProps({
         uuid: {required:true}
@@ -77,11 +76,13 @@
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
+            markDownloadAsDownloaded(download.value.id);
             loadingIcon.value = false;
+
 
         })
         .catch(error => {
-          console.error('Error downloading ZIP:', error);
+            console.error('Error downloading ZIP:', error);
         });
 
     }

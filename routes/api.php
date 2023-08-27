@@ -17,6 +17,7 @@ use App\Http\Controllers\Api\DownloadsController;
 
 Route::apiResource('downloads',DownloadsController::class);
 Route::get('downloads-get-folder/{id}',[DownloadsController::class,'getFolder']);
+Route::post('downloads-mark-as-downloaded/{id}',[DownloadsController::class,'markAsDownloaded']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

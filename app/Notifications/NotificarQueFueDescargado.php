@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class Compartir extends Notification
+class NotificarQueFueDescargado extends Notification
 {
     use Queueable;
 
@@ -37,10 +37,9 @@ class Compartir extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->subject($this->model->from . ' te envio unas imagenes ')
+                    ->subject($this->model->to . ' descargo las imagenes ')
                     ->greeting('Hola!')
-                    ->line($this->model->from . ' te envio unos archivos')
-                    ->action('Descargar', url('/downloads/'.$this->model->uuid))
+                    ->line($this->model->to . ' ha descargado los archivos a las ' . $this->model->downloaded_at)
                     ->line('Thank you for using our application!');
     }
 
