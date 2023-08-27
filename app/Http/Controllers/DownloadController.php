@@ -9,14 +9,9 @@ use Illuminate\Support\Facades\Storage;
 class DownloadController extends Controller
 {
     //
-
     function show($uuid)
     {
-        $model = Photo::where('uuid',$uuid)->firstOrFail();
-
-        //Si e una imagen descarga la iamgen , de lo contrario baja un zip
-
-        return view('download.show',['model' => $model]);
+        return view('download.show',['uuid' => $uuid]);
     }
 
 
