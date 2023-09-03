@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use Carbon\Carbon;
+use App\Models\Media;
 use App\Models\Photo;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -38,6 +39,13 @@ class DownloadsController extends Controller
         return new DownloadResource($download);
     }
 
+    public function getSingleFile(String $id)
+    {
+        $media = Media::findOrFail($id);
+        $path_de_imagen = Storage::disk("public")->path($media->id.'/'.$media->name);
+        return response()->download($path_de_imagen);
+    }
+
     public function getFolder(String $id)
     {
         $download = Photo::findOrFail($id);
@@ -67,7 +75,7 @@ class DownloadsController extends Controller
     public function markAsDownloaded(String $id)
     {
         $download = Photo::findOrFail($id);
-       
+
         if($download->was_downloaded)
         {
             return new DownloadResource($download);

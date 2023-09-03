@@ -26,11 +26,10 @@
 
                 <nav class="mx-auto flex w-full items-center justify-between " aria-label="Global">
                     <a href="/" class="text-3xl font-bold px-6 text-blue-600">Enviamelos</a>
-                    <a href="/photos/create" class="inline-flex  bg-blue-600 px-4 sm:px-10 py-6 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Empezar ahora</a>
+                    <a href="/uploader" class="inline-flex  bg-blue-600 px-4 sm:px-10 py-6 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Empezar ahora</a>
                 </nav>
 
             </header>
-
 
             <!-- Page Content -->
             <main class="relative">

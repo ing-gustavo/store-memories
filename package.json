@@ -19,11 +19,15 @@
         "vue": "^3.2.36"
     },
     "dependencies": {
+        "@headlessui/vue": "^1.7.16",
+        "@heroicons/vue": "^2.0.18",
+        "@vue-hero-icons/outline": "^1.7.2",
         "filepond": "^4.30.4",
         "filepond-plugin-file-metadata": "^1.0.8",
         "filepond-plugin-image-crop": "^2.0.6",
         "filepond-plugin-image-preview": "^4.6.11",
         "filepond-plugin-image-transform": "^3.8.7",
-        "vue-filepond": "^7.0.3"
+        "vue-filepond": "^7.0.3",
+        "vue-router": "^4.2.4"
     }
 }

@@ -4,42 +4,37 @@ namespace App\Http\Controllers;
 
 use App\Models\Media;
 use App\Models\Photo;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
+use App\Notifications\Compartir;
+use Illuminate\Support\Facades\Notification;
 
 class PhotosController extends Controller
 {
-    function index()
-    {
-
-    }
-
-    function create()
-    {
-        return view('photos.create');
-    }
-
     function store(Request $request)
     {
         //Tenemos que obtener las imagenes subidas
 
-        $request->validate([
+        $validated = $request->validate([
             'images'     => 'required|array|filled',
+            'from' => 'required|email:rfc,dns',
+            'to' => 'required|email:rfc,dns',
+            'message' => 'nullable',
         ]);
 
         //Crear Modelo
-        $photo = Photo::create([]);
+        $photo = Photo::create($validated);
 
-        //Obtener el id
-        $ids = collect($request->images)->pluck('id');
+        $photo->uuid = Str::uuid()->toString();
+
+        $photo->save();
+
         //Actualizar las imagenes con el modelo que se creo
-        Media::whereIn('id',$ids)->update(['model_id'=> $photo->id]);
+        Media::whereIn('id',$request->images)->update(['model_id'=> $photo->id]);
 
-        //Gurdar el modelo
+        Notification::route('mail', $photo->to)->notify(new Compartir($photo));
+        Notification::route('mail', 'ing.gustavo.rios.87@gmail.com')->notify(new Compartir($photo));
         return response()->json(['id' => $photo->id]);
     }
 
-    function edit(Photo $photo)
-    {
-        return view('photos.edit',['photo' => $photo]);
-    }
 }

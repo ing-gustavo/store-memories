@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
     use HasFactory;
-
     protected $with = ['media'];
+
+    protected $fillable = ['to','from','message'];
 
     public function media()
     {

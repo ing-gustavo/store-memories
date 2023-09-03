@@ -10,16 +10,13 @@ use Illuminate\Support\Facades\Notification;
 
 class EnviarController extends Controller
 {
-    //
-
     function store(Request $request)
     {
         $request->validate([
             'model_id' => 'required|numeric',
             'from' => 'required|email:rfc,dns',
             'to' => 'required|email:rfc,dns',
-            'title' => 'required',
-            'message' => 'required',
+            'message' => 'nullable',
         ]);
 
         //Pide codigo de verifacion antes de enviar el correo
