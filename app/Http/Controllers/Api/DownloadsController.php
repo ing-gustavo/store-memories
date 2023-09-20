@@ -61,7 +61,7 @@ class DownloadsController extends Controller
 
             $path_de_imagen = Storage::disk("public")->path($media->id.'/'.$media->name);
 
-            $relativePath = 'enviamelo-'.$download->uuid.'/' . $media->name;
+            $relativePath = 'enviamelo-'.$download->uuid.'/' . $media->file_name;
 
             $zip->addFile($path_de_imagen, $relativePath);
 
