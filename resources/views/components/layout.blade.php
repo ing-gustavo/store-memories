@@ -15,6 +15,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <meta name="robots" content="index,follow" />
         {!! SEO::generate(true) !!}
     </head>
 
