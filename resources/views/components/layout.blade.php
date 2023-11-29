@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-W1G6ES3JQ7"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11427082370"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-            gtag('config', 'G-W1G6ES3JQ7');
+        gtag('config', 'AW-11427082370');
         </script>
         <script type="text/javascript">
             (function(c,l,a,r,i,t,y){
