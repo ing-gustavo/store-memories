@@ -23,16 +23,16 @@
 
     <main class="bg-gray-100 min-h-screen">
 
-        <div class="flex  w-full items-start justify-center space-x-4  p-8">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 p-4">
 
-            <div class=" flex w-full flex-col   sm:w-1/2 shadow-md bg-white items-center justify-center  ">
+            <div class=" shadow-md bg-white items-center justify-center  ">
 
-                <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center ">Cargar imagenes </h1>
+                <h1 class="mt-4 text-xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center ">Cargar imagenes </h1>
 
                 <file-pond
                     name="image"
                     ref="pond"
-                    label-idle='<div class="flex space-x-4"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    label-idle='<div class="flex space-x-4 text-sm font-semibold"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     Arrastre y suelte archivos o haga clic para seleccionarlos</div>'
@@ -48,7 +48,7 @@
 
             </div>
 
-            <div class="flex w-full  sm:w-1/2 flex-col space-y-2 px-6 py-3 shadow-md bg-white">
+            <div class="flex-col space-y-2 px-6 py-3 shadow-md bg-white">
 
                 <div>
                     <label for="from" class="block text-sm font-medium leading-6 text-gray-900">Enviar correo a</label>
